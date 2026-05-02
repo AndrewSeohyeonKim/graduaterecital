@@ -74,13 +74,13 @@
 </script>
 
 <!-- Fonts:
-     Hahmlet — high-contrast Korean display (한국 보도니 느낌, 디스플레이용)
+     Hahmlet — high-contrast Korean display (디스플레이용)
      Gowun Batang — elegant Korean book serif (본문 액센트)
      Noto Serif KR — clean Korean body serif (본문)
-     Bodoni Moda + EB Garamond — for Latin (작품명, 작곡가 영문, 악장명) -->
+     Cormorant Garamond + EB Garamond — for Latin (작품명, 작곡가 영문, 악장명) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600;700;800&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@300;400;500;600;700;800&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 
 <style>
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -108,12 +108,12 @@
     word-break: keep-all;
   }
 
-  /* Latin elements override - use Bodoni Moda for Latin text within Korean */
+  /* Latin elements override - use Cormorant Garamond for Latin text within Korean */
   .latin {
-    font-family: 'Bodoni Moda', 'EB Garamond', serif;
+    font-family: 'Cormorant Garamond', 'EB Garamond', serif;
   }
   .latin-italic {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
   }
 
@@ -225,7 +225,7 @@
     color: var(--ink);
     border: 1px solid rgba(163, 135, 88, 0.5);
     border-radius: 999px;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 13px;
     font-weight: 500;
@@ -307,7 +307,7 @@
     /* Korean characters look elegant with extra letter-spacing on display */
   }
   .title-italic {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 18;
@@ -346,7 +346,7 @@
     margin-bottom: 6px;
   }
   .performer .name-en {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 32;
@@ -356,7 +356,7 @@
     margin-bottom: 12px;
   }
   .performer .instrument {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 18;
@@ -393,7 +393,7 @@
     margin-bottom: 6px;
   }
   .collab-inline .collab-name-en-only {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: normal;
     font-weight: 700;
     font-variation-settings: 'opsz' 18;
@@ -402,7 +402,7 @@
     letter-spacing: 0.04em;
   }
   .collab-inline .role {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 18;
@@ -520,7 +520,7 @@
     line-height: 1.3;
   }
   .venue-name {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 600;
     font-variation-settings: 'opsz' 32;
     font-size: clamp(17px, 4.8vw, 19px);
@@ -578,7 +578,7 @@
     margin-bottom: 32px;
   }
   .programme-heading .h-en {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 72;
@@ -620,7 +620,7 @@
 
   /* English-only programme titles in the Korean version */
   .work-title-en.main {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 18;
     font-size: clamp(16px, 4.6vw, 18.5px);
@@ -646,7 +646,7 @@
     text-align: left;
   }
   .movement {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-variation-settings: 'opsz' 18;
     font-size: clamp(13px, 3.6vw, 14px);
@@ -690,7 +690,7 @@
     margin-bottom: 8px;
   }
   .closing-signature-en {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 600;
     font-variation-settings: 'opsz' 24;
@@ -715,7 +715,7 @@
     margin-bottom: 18px;
   }
   .motto-title {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 600;
     font-variation-settings: 'opsz' 24;
@@ -991,7 +991,7 @@
     line-height: 1.2;
   }
   .poster-sub {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 32;
@@ -1026,7 +1026,7 @@
     margin-bottom: 10px;
   }
   .poster-name-en {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 32;
@@ -1036,7 +1036,7 @@
     margin-bottom: 14px;
   }
   .poster-instrument {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 24;
@@ -1062,7 +1062,7 @@
   }
   .poster-pianist .pn {
     display: block;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
     font-size: 30px;
@@ -1072,7 +1072,7 @@
   }
   .poster-pianist .pr {
     display: block;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 18;
@@ -1097,7 +1097,7 @@
     margin: 0 18px;
     opacity: 0.7;
   }
-  .poster-divider.small { font-size: 14px; margin: 30px 0 22px; }
+  .poster-divider.small { font-size: 14px; margin: 56px 0 28px; }
   .poster-divider.small::before, .poster-divider.small::after { width: 40px; }
   .poster-date {
     font-family: 'Hahmlet', 'Noto Serif KR', serif;
@@ -1116,7 +1116,7 @@
     margin-bottom: 26px;
   }
   .poster-venue {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
     font-size: 26px;
@@ -1134,8 +1134,9 @@
   }
 
   /* Page 2 */
+  .page-2 .poster-content { padding-top: 110px; }
   .poster-prog-title {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 700;
     font-variation-settings: 'opsz' 96;
@@ -1175,7 +1176,7 @@
   }
   .poster-work:last-child { padding-bottom: 0; margin-bottom: 0; }
   .poster-work .pw-title {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
     font-size: 24px;
@@ -1216,7 +1217,7 @@
     text-align: right;
   }
   .poster-motto {
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 600;
     font-variation-settings: 'opsz' 32;
@@ -1241,7 +1242,7 @@
     bottom: 88px;
     left: 0; right: 0;
     text-align: center;
-    font-family: 'Bodoni Moda', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-size: 16px;
     color: #A38758;
@@ -1379,10 +1380,10 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
           <span class="btn-label">초대장 공유하기</span>
         </button>
-        <button class="action-btn save-btn" id="saveImgBtn" type="button">
+        <a class="action-btn save-btn" href="andrew-recital-poster.pdf" download="andrew-recital-poster.pdf" type="button">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
-          <span class="btn-label">PDF로 저장</span>
-        </button>
+          <span class="btn-label">PDF 포스터 다운로드</span>
+        </a>
       </div>
 
     </div>
@@ -1439,7 +1440,6 @@
       <div class="poster-venue">TU Dublin Recital Hall</div>
       <div class="poster-address">East Quad, Grangegorman Lower<br>Dublin 7, D07 XFF2 · Ireland</div>
 
-      <div class="poster-page-marker">— I —</div>
     </div>
   </div>
 
@@ -1448,9 +1448,6 @@
     <div class="poster-frame"></div>
     <div class="poster-frame inner"></div>
     <div class="poster-content">
-      <div class="poster-label">— programme —</div>
-      <div class="poster-orn"><span class="line"></span><span class="dot">✦</span><span class="line"></span></div>
-
       <h2 class="poster-prog-title">Programme</h2>
       <div class="poster-prog-sub">— 프 로 그 램 —</div>
 
@@ -1491,7 +1488,6 @@
         2024년 시작한 커뮤니티 음악 프로젝트. 클래식 음악이 콘서트홀에 머무르지 않고, 일상의 공간 속에서 모두와 함께 나눠지길 바라는 마음에서 시작되었습니다.
       </div>
 
-      <div class="poster-page-marker">— II —</div>
     </div>
   </div>
 
@@ -1594,44 +1590,7 @@
       check();
     })();
 
-    // ===== Save as PDF (2-page A4 poster, 양면 출력 가능) =====
-    document.getElementById('saveImgBtn').addEventListener('click', async function() {
-      const btn = this;
-      const label = btn.querySelector('.btn-label');
-      btn.classList.add('saving');
-      label.textContent = '생성 중…';
-      try {
-        await document.fonts.ready;
-        await new Promise(r => setTimeout(r, 500));
-        const opts = {
-          scale: 1.5,
-          useCORS: true,
-          allowTaint: true,
-          backgroundColor: '#F4EFE7',
-          logging: false,
-          width: 1240,
-          height: 1754,
-          windowWidth: 1240,
-          windowHeight: 1754
-        };
-        const c1 = await html2canvas(document.getElementById('poster-p1'), opts);
-        const c2 = await html2canvas(document.getElementById('poster-p2'), opts);
-
-        const { jsPDF } = window.jspdf;
-        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true });
-        pdf.addImage(c1.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
-        pdf.addPage();
-        pdf.addImage(c2.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
-        pdf.save('김서현-졸업연주회-포스터.pdf');
-
-        label.textContent = '✓ 저장 완료';
-        setTimeout(() => { label.textContent = 'PDF로 저장'; btn.classList.remove('saving'); }, 1800);
-      } catch(e) {
-        label.textContent = '오류 · 다시 시도';
-        btn.classList.remove('saving');
-        console.error(e);
-      }
-    });
+    // PDF 포스터는 정적 파일(andrew-recital-poster.pdf)로 다운로드됩니다.
   </script>
 </body>
 </html>
