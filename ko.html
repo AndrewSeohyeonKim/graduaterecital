@@ -1134,7 +1134,15 @@
   }
 
   /* Page 2 */
-  .page-2 .poster-content { padding-top: 110px; }
+  .page-2 .poster-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .page-2 .poster-content > * { width: 100%; }
   .poster-prog-title {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
@@ -1413,9 +1421,6 @@
     <div class="poster-frame"></div>
     <div class="poster-frame inner"></div>
     <div class="poster-content">
-      <div class="poster-label">초 대 장</div>
-      <div class="poster-orn"><span class="line"></span><span class="dot">✦</span><span class="line"></span></div>
-
       <h2 class="poster-title">졸업 연주회</h2>
       <div class="poster-sub">an evening of clarinet music</div>
 
@@ -1481,21 +1486,12 @@
         </div>
       </div>
 
-      <div class="poster-divider small">✦</div>
-
-      <div class="poster-motto">Classical Music for Everyone</div>
-      <div class="poster-motto-text">
-        2024년 시작한 커뮤니티 음악 프로젝트. 클래식 음악이 콘서트홀에 머무르지 않고, 일상의 공간 속에서 모두와 함께 나눠지길 바라는 마음에서 시작되었습니다.
-      </div>
-
     </div>
   </div>
 
   <!-- Toast -->
   <div class="toast" id="toast">링크 복사 완료</div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     // ===== Scroll-triggered reveal =====
     (function() {
