@@ -930,7 +930,7 @@
     .avatar-frame { width: 100px; height: 100px; }
   }
 
-  /* ============================ A4 POSTER (Save Image) ============================ */
+  /* ============================ A4 POSTER — 2 PAGES (Save → PDF) ============================ */
   .poster {
     position: fixed;
     top: 0;
@@ -970,25 +970,21 @@
     font-size: 18px;
     letter-spacing: 0.6em;
     color: #6B2737;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .poster-orn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .poster-orn .line { flex: 0 1 90px; height: 1px; background: #1A1410; opacity: 0.55; }
-  .poster-orn .dot {
-    font-size: 18px;
-    color: #6B2737;
-    line-height: 1;
-  }
+  .poster-orn .dot { font-size: 18px; color: #6B2737; line-height: 1; }
   .poster-title {
     font-family: 'Hahmlet', 'Noto Serif KR', serif;
     font-weight: 600;
-    font-size: 64px;
+    font-size: 68px;
     letter-spacing: 0.22em;
     color: #1A1410;
     margin: 0 0 14px;
@@ -999,30 +995,31 @@
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 32;
-    font-size: 26px;
+    font-size: 28px;
     color: #6B2737;
     letter-spacing: 0.04em;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
-  .poster-photo {
+  /* Page 1 — proper aspect-ratio hero photo */
+  .page-1 .poster-photo {
     width: 100%;
-    height: 360px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     background: #1A1410;
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   }
-  .poster-photo img {
+  .page-1 .poster-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 40%;
+    object-position: center 38%;
     display: block;
   }
   .poster-name-kr {
     font-family: 'Hahmlet', 'Noto Serif KR', serif;
     font-weight: 700;
-    font-size: 60px;
+    font-size: 64px;
     color: #1A1410;
     letter-spacing: 0.24em;
     line-height: 1.2;
@@ -1036,17 +1033,17 @@
     font-size: 24px;
     color: #4A3A2F;
     letter-spacing: 0.08em;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
   .poster-instrument {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 24;
-    font-size: 22px;
+    font-size: 24px;
     color: #6B2737;
     letter-spacing: 0.04em;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
   }
   .poster-pianist {
     margin-bottom: 30px;
@@ -1068,7 +1065,7 @@
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.04em;
     margin-bottom: 6px;
@@ -1087,7 +1084,7 @@
     color: #A38758;
     font-size: 22px;
     letter-spacing: 0.3em;
-    margin: 30px 0;
+    margin: 28px 0;
     opacity: 0.85;
   }
   .poster-divider::before, .poster-divider::after {
@@ -1100,12 +1097,12 @@
     margin: 0 18px;
     opacity: 0.7;
   }
-  .poster-divider.small { font-size: 14px; margin: 26px 0; }
+  .poster-divider.small { font-size: 14px; margin: 30px 0 22px; }
   .poster-divider.small::before, .poster-divider.small::after { width: 40px; }
   .poster-date {
     font-family: 'Hahmlet', 'Noto Serif KR', serif;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.12em;
     margin-bottom: 6px;
@@ -1113,67 +1110,142 @@
   .poster-time {
     font-family: 'Hahmlet', 'Noto Serif KR', serif;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 32px;
     color: #6B2737;
     letter-spacing: 0.14em;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
   .poster-venue {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 24px;
+    font-size: 26px;
     color: #1A1410;
     letter-spacing: 0.04em;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .poster-address {
     font-family: 'EB Garamond', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     color: #4A3A2F;
-    line-height: 1.6;
+    line-height: 1.7;
   }
-  .poster-prog-heading {
+
+  /* Page 2 */
+  .poster-prog-title {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
-    font-weight: 600;
-    font-variation-settings: 'opsz' 32;
-    font-size: 32px;
+    font-weight: 700;
+    font-variation-settings: 'opsz' 96;
+    font-size: 64px;
     color: #1A1410;
-    margin-bottom: 28px;
+    margin: 0 0 10px;
     letter-spacing: 0.02em;
   }
-  .poster-works { margin-bottom: 8px; }
-  .poster-work { margin-bottom: 18px; }
+  .poster-prog-sub {
+    font-family: 'Hahmlet', 'Noto Serif KR', serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #A38758;
+    letter-spacing: 0.5em;
+    margin-bottom: 50px;
+  }
+  .poster-works { margin-bottom: 0; }
+  .poster-work {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    position: relative;
+  }
+  .poster-work:not(:last-child)::after {
+    content: '✦';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    color: #A38758;
+    font-size: 11px;
+    background: #F4EFE7;
+    padding: 0 16px;
+    line-height: 1;
+  }
+  .poster-work:not(:last-child) {
+    border-bottom: 1px solid rgba(163, 135, 88, 0.4);
+  }
+  .poster-work:last-child { padding-bottom: 0; margin-bottom: 0; }
   .poster-work .pw-title {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 22px;
+    font-size: 24px;
     color: #1A1410;
     line-height: 1.35;
     letter-spacing: 0.01em;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .poster-work .pw-comp {
     font-family: 'EB Garamond', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 20px;
     color: #6B2737;
     letter-spacing: 0.01em;
+    margin-bottom: 8px;
+  }
+  .poster-work .pw-mvt {
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left;
+  }
+  .poster-work .pw-mvt > div {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A3A2F;
+    line-height: 1.85;
+  }
+  .poster-work .pw-mvt .r {
+    color: #A38758;
+    font-style: italic;
+    font-weight: 600;
+    margin-right: 8px;
+    display: inline-block;
+    min-width: 26px;
+    text-align: right;
   }
   .poster-motto {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
     font-weight: 600;
     font-variation-settings: 'opsz' 32;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.02em;
-    margin-top: 4px;
+    margin: 4px 0 14px;
+  }
+  .poster-motto-text {
+    font-family: 'Gowun Batang', 'Noto Serif KR', serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #4A3A2F;
+    line-height: 1.85;
+    max-width: 720px;
+    margin: 0 auto;
+    letter-spacing: 0.02em;
+    word-break: keep-all;
+  }
+  .poster-page-marker {
+    position: absolute;
+    bottom: 88px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #A38758;
+    letter-spacing: 0.4em;
   }
 </style>
 </head>
@@ -1308,8 +1380,8 @@
           <span class="btn-label">초대장 공유하기</span>
         </button>
         <button class="action-btn save-btn" id="saveImgBtn" type="button">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span class="btn-label">이미지로 저장</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          <span class="btn-label">PDF로 저장</span>
         </button>
       </div>
 
@@ -1335,8 +1407,8 @@
     <button class="close-btn" id="calClose" type="button">취 소</button>
   </div>
 
-  <!-- A4 Poster (off-screen, captured by Save Image) -->
-  <div id="poster" class="poster" aria-hidden="true">
+  <!-- A4 Poster — Page 1: 초대글 + 일시·장소 -->
+  <div id="poster-p1" class="poster page-1" aria-hidden="true">
     <div class="poster-frame"></div>
     <div class="poster-frame inner"></div>
     <div class="poster-content">
@@ -1367,9 +1439,21 @@
       <div class="poster-venue">TU Dublin Recital Hall</div>
       <div class="poster-address">East Quad, Grangegorman Lower<br>Dublin 7, D07 XFF2 · Ireland</div>
 
-      <div class="poster-divider">∽</div>
+      <div class="poster-page-marker">— I —</div>
+    </div>
+  </div>
 
-      <div class="poster-prog-heading">Programme</div>
+  <!-- A4 Poster — Page 2: Programme & Motto -->
+  <div id="poster-p2" class="poster page-2" aria-hidden="true">
+    <div class="poster-frame"></div>
+    <div class="poster-frame inner"></div>
+    <div class="poster-content">
+      <div class="poster-label">— programme —</div>
+      <div class="poster-orn"><span class="line"></span><span class="dot">✦</span><span class="line"></span></div>
+
+      <h2 class="poster-prog-title">Programme</h2>
+      <div class="poster-prog-sub">— 프 로 그 램 —</div>
+
       <div class="poster-works">
         <div class="poster-work">
           <div class="pw-title">Three Korean Folk Melodies about Bird</div>
@@ -1378,10 +1462,21 @@
         <div class="poster-work">
           <div class="pw-title">Fantasiestücke, Op. 73</div>
           <div class="pw-comp">Robert Schumann (1810–1856)</div>
+          <div class="pw-mvt">
+            <div><span class="r">i.</span> Zart und mit Ausdruck</div>
+            <div><span class="r">ii.</span> Lebhaft, leicht</div>
+            <div><span class="r">iii.</span> Rasch und mit Feuer</div>
+          </div>
         </div>
         <div class="poster-work">
-          <div class="pw-title">Sonata for Clarinet and Piano No. 1 in F minor, Op. 120, No. 1</div>
+          <div class="pw-title">Sonata for Clarinet and Piano No. 1<br>in F minor, Op. 120, No. 1</div>
           <div class="pw-comp">Johannes Brahms (1833–1897)</div>
+          <div class="pw-mvt">
+            <div><span class="r">i.</span> Allegro appassionato</div>
+            <div><span class="r">ii.</span> Andante un poco adagio</div>
+            <div><span class="r">iii.</span> Allegretto grazioso</div>
+            <div><span class="r">iv.</span> Vivace</div>
+          </div>
         </div>
         <div class="poster-work">
           <div class="pw-title">Parents' Love</div>
@@ -1392,6 +1487,11 @@
       <div class="poster-divider small">✦</div>
 
       <div class="poster-motto">Classical Music for Everyone</div>
+      <div class="poster-motto-text">
+        2024년 시작한 커뮤니티 음악 프로젝트. 클래식 음악이 콘서트홀에 머무르지 않고, 일상의 공간 속에서 모두와 함께 나눠지길 바라는 마음에서 시작되었습니다.
+      </div>
+
+      <div class="poster-page-marker">— II —</div>
     </div>
   </div>
 
@@ -1399,6 +1499,7 @@
   <div class="toast" id="toast">링크 복사 완료</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     // ===== Scroll-triggered reveal =====
     (function() {
@@ -1493,7 +1594,7 @@
       check();
     })();
 
-    // ===== Save as image (A4 poster) =====
+    // ===== Save as PDF (2-page A4 poster, 양면 출력 가능) =====
     document.getElementById('saveImgBtn').addEventListener('click', async function() {
       const btn = this;
       const label = btn.querySelector('.btn-label');
@@ -1501,10 +1602,9 @@
       label.textContent = '생성 중…';
       try {
         await document.fonts.ready;
-        await new Promise(r => setTimeout(r, 400));
-        const poster = document.getElementById('poster');
-        const canvas = await html2canvas(poster, {
-          scale: 1.4,
+        await new Promise(r => setTimeout(r, 500));
+        const opts = {
+          scale: 1.5,
           useCORS: true,
           allowTaint: true,
           backgroundColor: '#F4EFE7',
@@ -1513,13 +1613,19 @@
           height: 1754,
           windowWidth: 1240,
           windowHeight: 1754
-        });
-        const link = document.createElement('a');
-        link.download = '김서현-졸업연주회-포스터.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        };
+        const c1 = await html2canvas(document.getElementById('poster-p1'), opts);
+        const c2 = await html2canvas(document.getElementById('poster-p2'), opts);
+
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true });
+        pdf.addImage(c1.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+        pdf.addPage();
+        pdf.addImage(c2.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+        pdf.save('김서현-졸업연주회-포스터.pdf');
+
         label.textContent = '✓ 저장 완료';
-        setTimeout(() => { label.textContent = '이미지로 저장'; btn.classList.remove('saving'); }, 1800);
+        setTimeout(() => { label.textContent = 'PDF로 저장'; btn.classList.remove('saving'); }, 1800);
       } catch(e) {
         label.textContent = '오류 · 다시 시도';
         btn.classList.remove('saving');

@@ -918,7 +918,7 @@
     .avatar-frame { width: 100px; height: 100px; }
   }
 
-  /* ============================ A4 POSTER (Save Image) ============================ */
+  /* ============================ A4 POSTER — 2 PAGES (Save Image → PDF) ============================ */
   .poster {
     position: fixed;
     top: 0;
@@ -959,14 +959,14 @@
     letter-spacing: 0.5em;
     text-transform: lowercase;
     color: #6B2737;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
   }
   .poster-orn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-bottom: 32px;
+    margin-bottom: 28px;
   }
   .poster-orn .line { flex: 0 1 90px; height: 1px; background: #1A1410; opacity: 0.55; }
   .poster-orn .dot {
@@ -979,35 +979,36 @@
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 96;
-    font-size: 56px;
+    font-size: 60px;
     letter-spacing: 0.32em;
     text-transform: uppercase;
     color: #1A1410;
-    margin: 0 0 12px;
+    margin: 0 0 14px;
   }
   .poster-sub {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
     font-weight: 500;
     font-variation-settings: 'opsz' 32;
-    font-size: 26px;
+    font-size: 28px;
     color: #6B2737;
     letter-spacing: 0.04em;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
   }
-  .poster-photo {
+  /* Page 1 — large hero photo with proper aspect (16:9 banner) */
+  .page-1 .poster-photo {
     width: 100%;
-    height: 360px;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    margin-bottom: 38px;
+    margin-bottom: 36px;
     background: #1A1410;
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   }
-  .poster-photo img {
+  .page-1 .poster-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 40%;
+    object-position: center 38%;
     display: block;
   }
   .poster-name-first {
@@ -1018,17 +1019,17 @@
     font-size: 32px;
     color: #4A3A2F;
     letter-spacing: 0.14em;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
   .poster-name {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 96;
-    font-size: 56px;
+    font-size: 60px;
     color: #1A1410;
     letter-spacing: 0.05em;
     line-height: 1.05;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
   .poster-instrument {
     font-family: 'Bodoni Moda', serif;
@@ -1038,7 +1039,7 @@
     font-size: 24px;
     color: #6B2737;
     letter-spacing: 0.04em;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
   }
   .poster-pianist {
     margin-bottom: 30px;
@@ -1060,7 +1061,7 @@
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.04em;
     margin-bottom: 6px;
@@ -1081,7 +1082,7 @@
     font-style: italic;
     font-size: 22px;
     letter-spacing: 0.3em;
-    margin: 30px 0;
+    margin: 28px 0;
     opacity: 0.85;
   }
   .poster-divider::before, .poster-divider::after {
@@ -1094,13 +1095,13 @@
     margin: 0 18px;
     opacity: 0.7;
   }
-  .poster-divider.small { font-size: 14px; margin: 26px 0; }
+  .poster-divider.small { font-size: 14px; margin: 30px 0 22px; }
   .poster-divider.small::before, .poster-divider.small::after { width: 40px; }
   .poster-date {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 32;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.04em;
     margin-bottom: 6px;
@@ -1109,71 +1110,145 @@
     font-family: 'Bodoni Moda', serif;
     font-weight: 600;
     font-variation-settings: 'opsz' 32;
-    font-size: 30px;
+    font-size: 32px;
     color: #6B2737;
     letter-spacing: 0.04em;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
   .poster-venue {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 24px;
+    font-size: 26px;
     color: #1A1410;
     letter-spacing: 0.04em;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .poster-address {
     font-family: 'EB Garamond', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 19px;
     color: #4A3A2F;
-    line-height: 1.6;
+    line-height: 1.7;
   }
-  .poster-prog-heading {
+
+  /* Page 2 — Programme & Motto */
+  .poster-prog-title {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
-    font-weight: 600;
-    font-variation-settings: 'opsz' 32;
-    font-size: 32px;
+    font-weight: 700;
+    font-variation-settings: 'opsz' 96;
+    font-size: 64px;
     color: #1A1410;
-    margin-bottom: 28px;
+    margin: 0 0 10px;
     letter-spacing: 0.02em;
   }
+  .poster-prog-sub {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #A38758;
+    letter-spacing: 0.32em;
+    text-transform: lowercase;
+    margin-bottom: 50px;
+  }
   .poster-works {
-    margin-bottom: 8px;
+    margin-bottom: 0;
   }
   .poster-work {
-    margin-bottom: 18px;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    position: relative;
   }
+  .poster-work:not(:last-child)::after {
+    content: '✦';
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    color: #A38758;
+    font-size: 11px;
+    background: #F4EFE7;
+    padding: 0 16px;
+    line-height: 1;
+  }
+  .poster-work:not(:last-child) {
+    border-bottom: 1px solid rgba(163, 135, 88, 0.4);
+  }
+  .poster-work:last-child { padding-bottom: 0; margin-bottom: 0; }
   .poster-work .pw-title {
     font-family: 'Bodoni Moda', serif;
     font-weight: 700;
     font-variation-settings: 'opsz' 24;
-    font-size: 22px;
+    font-size: 24px;
     color: #1A1410;
     line-height: 1.35;
     letter-spacing: 0.01em;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
   .poster-work .pw-comp {
     font-family: 'EB Garamond', serif;
     font-style: italic;
     font-weight: 500;
-    font-size: 19px;
+    font-size: 20px;
     color: #6B2737;
     letter-spacing: 0.01em;
+    margin-bottom: 8px;
+  }
+  .poster-work .pw-mvt {
+    margin-top: 10px;
+    display: inline-block;
+    text-align: left;
+  }
+  .poster-work .pw-mvt > div {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A3A2F;
+    line-height: 1.85;
+  }
+  .poster-work .pw-mvt .r {
+    color: #A38758;
+    font-style: italic;
+    font-weight: 600;
+    margin-right: 8px;
+    display: inline-block;
+    min-width: 26px;
+    text-align: right;
   }
   .poster-motto {
     font-family: 'Bodoni Moda', serif;
     font-style: italic;
     font-weight: 600;
     font-variation-settings: 'opsz' 32;
-    font-size: 28px;
+    font-size: 30px;
     color: #1A1410;
     letter-spacing: 0.02em;
-    margin-top: 4px;
+    margin: 4px 0 14px;
+  }
+  .poster-motto-text {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 17px;
+    color: #4A3A2F;
+    line-height: 1.7;
+    max-width: 720px;
+    margin: 0 auto;
+    letter-spacing: 0.005em;
+  }
+  .poster-page-marker {
+    position: absolute;
+    bottom: 88px;
+    left: 0; right: 0;
+    text-align: center;
+    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: #A38758;
+    letter-spacing: 0.4em;
   }
 </style>
 </head>
@@ -1330,8 +1405,8 @@
           <span class="btn-label">Share Invitation</span>
         </button>
         <button class="action-btn save-btn" id="saveImgBtn" type="button">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span class="btn-label">Save as Image</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          <span class="btn-label">Save as PDF</span>
         </button>
       </div>
 
@@ -1357,8 +1432,8 @@
     <button class="close-btn" id="calClose" type="button">Cancel</button>
   </div>
 
-  <!-- A4 Poster (off-screen, captured by Save Image) -->
-  <div id="poster" class="poster" aria-hidden="true">
+  <!-- A4 Poster — Page 1: Invitation -->
+  <div id="poster-p1" class="poster page-1" aria-hidden="true">
     <div class="poster-frame"></div>
     <div class="poster-frame inner"></div>
     <div class="poster-content">
@@ -1389,9 +1464,21 @@
       <div class="poster-venue">TU Dublin Recital Hall</div>
       <div class="poster-address">East Quad, Grangegorman Lower<br>Dublin 7, D07 XFF2 · Ireland</div>
 
-      <div class="poster-divider">∽</div>
+      <div class="poster-page-marker">— I —</div>
+    </div>
+  </div>
 
-      <div class="poster-prog-heading">Programme</div>
+  <!-- A4 Poster — Page 2: Programme & Motto -->
+  <div id="poster-p2" class="poster page-2" aria-hidden="true">
+    <div class="poster-frame"></div>
+    <div class="poster-frame inner"></div>
+    <div class="poster-content">
+      <div class="poster-label">— programme —</div>
+      <div class="poster-orn"><span class="line"></span><span class="dot">✦</span><span class="line"></span></div>
+
+      <h2 class="poster-prog-title">Programme</h2>
+      <div class="poster-prog-sub">— the evening's works —</div>
+
       <div class="poster-works">
         <div class="poster-work">
           <div class="pw-title">Three Korean Folk Melodies about Bird</div>
@@ -1400,10 +1487,21 @@
         <div class="poster-work">
           <div class="pw-title">Fantasiestücke, Op. 73</div>
           <div class="pw-comp">Robert Schumann (1810–1856)</div>
+          <div class="pw-mvt">
+            <div><span class="r">i.</span> Zart und mit Ausdruck</div>
+            <div><span class="r">ii.</span> Lebhaft, leicht</div>
+            <div><span class="r">iii.</span> Rasch und mit Feuer</div>
+          </div>
         </div>
         <div class="poster-work">
-          <div class="pw-title">Sonata for Clarinet and Piano No. 1 in F minor, Op. 120, No. 1</div>
+          <div class="pw-title">Sonata for Clarinet and Piano No. 1<br>in F minor, Op. 120, No. 1</div>
           <div class="pw-comp">Johannes Brahms (1833–1897)</div>
+          <div class="pw-mvt">
+            <div><span class="r">i.</span> Allegro appassionato</div>
+            <div><span class="r">ii.</span> Andante un poco adagio</div>
+            <div><span class="r">iii.</span> Allegretto grazioso</div>
+            <div><span class="r">iv.</span> Vivace</div>
+          </div>
         </div>
         <div class="poster-work">
           <div class="pw-title">Parents' Love</div>
@@ -1414,6 +1512,11 @@
       <div class="poster-divider small">✦</div>
 
       <div class="poster-motto">Classical Music for Everyone</div>
+      <div class="poster-motto-text">
+        A community music project, built on a simple belief that classical music should not live only in concert halls, but be encountered as a shared experience in everyday life.
+      </div>
+
+      <div class="poster-page-marker">— II —</div>
     </div>
   </div>
 
@@ -1421,6 +1524,7 @@
   <div class="toast" id="toast">Link copied</div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script>
     // ===== Scroll-triggered reveal =====
     (function() {
@@ -1515,7 +1619,7 @@
       check();
     })();
 
-    // ===== Save as image (A4 poster) =====
+    // ===== Save as PDF (2-page A4 poster, double-sided printable) =====
     document.getElementById('saveImgBtn').addEventListener('click', async function() {
       const btn = this;
       const label = btn.querySelector('.btn-label');
@@ -1523,11 +1627,9 @@
       label.textContent = 'Generating…';
       try {
         await document.fonts.ready;
-        // Allow a short paint cycle
-        await new Promise(r => setTimeout(r, 400));
-        const poster = document.getElementById('poster');
-        const canvas = await html2canvas(poster, {
-          scale: 1.4,
+        await new Promise(r => setTimeout(r, 500));
+        const opts = {
+          scale: 1.5,
           useCORS: true,
           allowTaint: true,
           backgroundColor: '#F4EFE7',
@@ -1536,13 +1638,19 @@
           height: 1754,
           windowWidth: 1240,
           windowHeight: 1754
-        });
-        const link = document.createElement('a');
-        link.download = 'andrew-recital-poster.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
+        };
+        const c1 = await html2canvas(document.getElementById('poster-p1'), opts);
+        const c2 = await html2canvas(document.getElementById('poster-p2'), opts);
+
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4', compress: true });
+        pdf.addImage(c1.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+        pdf.addPage();
+        pdf.addImage(c2.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, 210, 297, undefined, 'FAST');
+        pdf.save('andrew-recital-poster.pdf');
+
         label.textContent = '✓ Saved';
-        setTimeout(() => { label.textContent = 'Save as Image'; btn.classList.remove('saving'); }, 1800);
+        setTimeout(() => { label.textContent = 'Save as PDF'; btn.classList.remove('saving'); }, 1800);
       } catch(e) {
         label.textContent = 'Error · retry';
         btn.classList.remove('saving');
