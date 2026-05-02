@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Andrew Seohyeon Kim · Graduate Recital</title>
+<meta property="og:title" content="Andrew Seohyeon Kim — Graduate Recital">
+<meta property="og:description" content="Mon, 25 May 2026 · 5:40 PM · TU Dublin Recital Hall">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..900,0..100;1,9..144,300..900,0..100&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { background: #0F0F0F; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #0F0F0F;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .invitation {
+    width: 100%;
+    max-width: 430px;
+    background: #FAFAF8;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  }
+
+  /* Top color bar */
+  .top-bar {
+    height: 6px;
+    background: #C8102E;
+  }
+
+  .content {
+    padding: 36px 28px 0;
+  }
+
+  /* ============================ HEADER ROW ============================ */
+  .header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #0F0F0F;
+    padding-bottom: 14px;
+    margin-bottom: 64px;
+  }
+  .header-row .meta {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #0F0F0F;
+    font-weight: 700;
+  }
+  .header-row .meta .dot {
+    color: #C8102E;
+    margin: 0 6px;
+  }
+  .header-row .number {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-size: 22px;
+    color: #0F0F0F;
+    font-weight: 400;
+  }
+
+  /* ============================ HERO DISPLAY ============================ */
+  .hero {
+    margin-bottom: 80px;
+  }
+  .eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #C8102E;
+    font-weight: 600;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: #C8102E;
+  }
+
+  .display {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 30;
+    font-weight: 400;
+    font-size: 78px;
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+    color: #0F0F0F;
+    margin-bottom: 6px;
+  }
+  .display .it {
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 60;
+    font-weight: 400;
+    color: #C8102E;
+  }
+  .display .amp {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    color: #C8102E;
+    font-weight: 300;
+  }
+
+  .display-sub {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #717171;
+    margin-top: 20px;
+    margin-bottom: 0;
+    line-height: 1.65;
+    max-width: 320px;
+    font-weight: 400;
+  }
+
+  /* Performer block */
+  .performer-row {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(15,15,15,0.12);
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+  }
+  .performer-row .name-block .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .performer-row .name-block .name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: #0F0F0F;
+  }
+  .performer-row .instrument {
+    text-align: right;
+  }
+  .performer-row .instrument .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .performer-row .instrument .value {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 72, 'SOFT' 80;
+    font-size: 22px;
+    color: #C8102E;
+    font-weight: 400;
+  }
+
+  /* ============================ SECTION ============================ */
+  section { margin-bottom: 64px; }
+
+  .section-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 50;
+    font-size: 13px;
+    color: #C8102E;
+    font-weight: 400;
+    margin-bottom: 6px;
+  }
+  .section-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #0F0F0F;
+    font-weight: 700;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #0F0F0F;
+  }
+
+  /* WHEN */
+  .when-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 24px;
+  }
+  .when-grid .cell .key {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .when-grid .cell .val {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: 21px;
+    font-weight: 500;
+    color: #0F0F0F;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+  }
+  .when-grid .cell .val .small {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-size: 15px;
+    color: #717171;
+    font-weight: 400;
+    margin-top: 4px;
+    display: block;
+  }
+
+  /* WHERE */
+  .venue-name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.018em;
+    color: #0F0F0F;
+    margin-bottom: 10px;
+  }
+  .venue-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #717171;
+    line-height: 1.65;
+    font-weight: 400;
+    margin-bottom: 22px;
+  }
+  .venue-detail strong {
+    color: #0F0F0F;
+    font-weight: 500;
+  }
+  .map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 22px;
+    background: #0F0F0F;
+    color: #FAFAF8;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    transition: background 0.2s ease;
+  }
+  .map-button .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+  .map-button:hover, .map-button:active { background: #C8102E; }
+  .map-button:hover .arrow, .map-button:active .arrow { transform: translateX(4px); }
+
+  /* PROGRAMME */
+  .programme-list .work {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 16px;
+    padding: 22px 0;
+    border-top: 1px solid rgba(15,15,15,0.10);
+  }
+  .programme-list .work:last-child { border-bottom: 1px solid rgba(15,15,15,0.10); }
+  .programme-list .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 70;
+    font-size: 26px;
+    color: #C8102E;
+    line-height: 1;
+    font-weight: 400;
+    padding-top: 4px;
+  }
+  .programme-list .info .title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0F0F0F;
+    line-height: 1.3;
+    margin-bottom: 4px;
+    letter-spacing: -0.012em;
+  }
+  .programme-list .info .composer {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 72, 'SOFT' 60;
+    font-size: 15px;
+    color: #717171;
+    margin-bottom: 4px;
+    font-weight: 400;
+  }
+  .programme-list .info .movements {
+    margin-top: 14px;
+    display: grid;
+    gap: 4px;
+  }
+  .programme-list .info .mov {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    color: #4A4A4A;
+    letter-spacing: 0.005em;
+    line-height: 1.55;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    gap: 6px;
+  }
+  .programme-list .info .mov .num {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    color: #C8102E;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    padding-top: 0;
+  }
+
+  /* PIANIST CARD */
+  .pianist-block {
+    background: #0F0F0F;
+    color: #FAFAF8;
+    margin: 0 -28px;
+    padding: 32px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    position: relative;
+  }
+  .pianist-block::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 28px;
+    width: 60px;
+    height: 4px;
+    background: #C8102E;
+  }
+  .pianist-block .label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: rgba(250,250,248,0.6);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .pianist-block .name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 30;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+  }
+  .pianist-block .glyph {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100;
+    font-size: 56px;
+    color: #C8102E;
+    line-height: 1;
+    font-weight: 300;
+  }
+
+  /* CLOSING */
+  .closing {
+    padding: 48px 0 12px;
+  }
+  .closing .quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 72, 'SOFT' 70;
+    font-size: 22px;
+    line-height: 1.4;
+    color: #0F0F0F;
+    margin-bottom: 22px;
+    letter-spacing: -0.015em;
+  }
+  .closing .from {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid rgba(15,15,15,0.12);
+    padding-top: 18px;
+  }
+  .closing .from-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #717171;
+    font-weight: 600;
+  }
+  .closing .from-name {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-variation-settings: 'opsz' 144, 'SOFT' 80;
+    font-size: 28px;
+    color: #C8102E;
+    font-weight: 400;
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    height: 6px;
+    background: #0F0F0F;
+    margin-top: 44px;
+  }
+
+  /* SAVE BUTTON */
+  #saveImgBtn {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    z-index: 1000;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    background: #0F0F0F;
+    color: #FAFAF8;
+    border: 0;
+    border-radius: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.35);
+    transition: all 0.2s ease;
+  }
+  #saveImgBtn:hover, #saveImgBtn:active { background: #C8102E; transform: translateY(-2px); }
+  #saveImgBtn.saving { opacity: 0.7; cursor: wait; }
+  @media print { #saveImgBtn { display: none; } }
+
+  @media (max-width: 380px) {
+    .content { padding: 30px 22px 0; }
+    .display { font-size: 64px; }
+    .pianist-block { margin: 0 -22px; padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+  <article class="invitation">
+    <div class="top-bar"></div>
+
+    <div class="content">
+
+      <!-- HEADER -->
+      <div class="header-row">
+        <div class="meta">Dublin <span class="dot">•</span> 2026</div>
+        <div class="number">№ 01</div>
+      </div>
+
+      <!-- HERO -->
+      <header class="hero">
+        <div class="eyebrow">You are invited to</div>
+
+        <h1 class="display">A Graduate <span class="it">Recital.</span></h1>
+
+        <p class="display-sub">An evening of clarinet music — works by Park, Schumann, Brahms, and Uhm — performed at the close of a long studentship in Dublin.</p>
+
+        <div class="performer-row">
+          <div class="name-block">
+            <div class="label">Performer</div>
+            <div class="name">Andrew<br>Seohyeon Kim</div>
+          </div>
+          <div class="instrument">
+            <div class="label">Instrument</div>
+            <div class="value">Clarinet</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- WHEN -->
+      <section>
+        <div class="section-num">i.</div>
+        <div class="section-label">When</div>
+        <div class="when-grid">
+          <div class="cell">
+            <div class="key">Date</div>
+            <div class="val">Mon, 25 May<br><span class="small">two thousand twenty-six</span></div>
+          </div>
+          <div class="cell">
+            <div class="key">Time</div>
+            <div class="val">5:40 PM<br><span class="small">seventeen-forty</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHERE -->
+      <section>
+        <div class="section-num">ii.</div>
+        <div class="section-label">Where</div>
+        <div class="venue-name">TU Dublin<br>Recital Hall</div>
+        <div class="venue-detail">
+          <strong>East Quad, Grangegorman Lower</strong><br>
+          Dublin 7, D07 XFF2 — Ireland
+        </div>
+        <a class="map-button" href="https://www.google.com/maps/search/?api=1&query=TU+Dublin+East+Quad+Grangegorman+Dublin+D07+XFF2" target="_blank" rel="noopener">
+          Open in Maps <span class="arrow">→</span>
+        </a>
+      </section>
+
+      <!-- PROGRAMME -->
+      <section>
+        <div class="section-num">iii.</div>
+        <div class="section-label">Programme</div>
+
+        <div class="programme-list">
+
+          <div class="work">
+            <div class="num">01</div>
+            <div class="info">
+              <div class="title">Three Korean Folk Melodies about Bird</div>
+              <div class="composer">Sumin Park</div>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="num">02</div>
+            <div class="info">
+              <div class="title">Fantasiestücke, Op. 73</div>
+              <div class="composer">Robert Schumann <span style="color:#A8A8A8">(1810–1856)</span></div>
+              <div class="movements">
+                <div class="mov"><span class="num">I</span><span>Zart und mit Ausdruck</span></div>
+                <div class="mov"><span class="num">II</span><span>Lebhaft, leicht</span></div>
+                <div class="mov"><span class="num">III</span><span>Rasch und mit Feuer</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="num">03</div>
+            <div class="info">
+              <div class="title">Sonata for Clarinet and Piano, No. 1 in F minor, Op. 120, No. 1</div>
+              <div class="composer">Johannes Brahms <span style="color:#A8A8A8">(1833–1897)</span></div>
+              <div class="movements">
+                <div class="mov"><span class="num">I</span><span>Allegro appassionato</span></div>
+                <div class="mov"><span class="num">II</span><span>Andante un poco adagio</span></div>
+                <div class="mov"><span class="num">III</span><span>Allegretto grazioso</span></div>
+                <div class="mov"><span class="num">IV</span><span>Vivace</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="work">
+            <div class="num">04</div>
+            <div class="info">
+              <div class="title">Parents' Love</div>
+              <div class="composer">SiHyun Uhm</div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- PIANIST -->
+    <div class="pianist-block">
+      <div>
+        <div class="label">Piano</div>
+        <div class="name">Edward Holly</div>
+      </div>
+      <div class="glyph">♪</div>
+    </div>
+
+    <div class="content" style="padding-bottom: 0;">
+      <!-- CLOSING -->
+      <footer class="closing">
+        <div class="quote">"Music begins where the possibilities of language end."</div>
+        <div class="from">
+          <div class="from-label">— with gratitude</div>
+          <div class="from-name">Andrew</div>
+        </div>
+      </footer>
+    </div>
+
+    <div class="bottom-bar"></div>
+  </article>
+
+  <button id="saveImgBtn" aria-label="Save as image">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span>Save as Image</span>
+  </button>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    document.getElementById('saveImgBtn').addEventListener('click', async function() {
+      const btn = this;
+      const span = btn.querySelector('span');
+      btn.classList.add('saving');
+      span.textContent = 'Saving…';
+      try {
+        await document.fonts.ready;
+        await new Promise(r => setTimeout(r, 200));
+        const canvas = await html2canvas(document.querySelector('.invitation'), {
+          scale: 2, useCORS: true, allowTaint: true, backgroundColor: '#FAFAF8', logging: false
+        });
+        const link = document.createElement('a');
+        link.download = 'andrew-recital-modern.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+        span.textContent = '✓ Saved';
+        setTimeout(() => { span.textContent = 'Save as Image'; btn.classList.remove('saving'); }, 1800);
+      } catch(e) {
+        span.textContent = 'Error · retry';
+        btn.classList.remove('saving');
+        console.error(e);
+      }
+    });
+  </script>
+</body>
+</html>
