@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Andrew Seohyeon Kim — Graduation Recital</title>
+<style>
+@page {
+  size: A5;
+  margin: 0;
+}
+html { font-size: 11.3px; }
+
+:root{
+  --cream:        #F4EFE7;
+  --tan:          rgba(163, 135, 88, 0.40);
+  --tan-solid:    #A38758;
+  --burgundy:     #6B2737;
+  --brown:        #4A3A2F;
+  --ink:          #1A1410;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: var(--cream); }
+body {
+  font-family: 'Cormorant Garamond', 'EB Garamond', 'DejaVu Serif', serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--cream);
+  page-break-after: always;
+  position: relative;
+  padding: 4.2em 3em 3.2em;
+  display: flex;
+  flex-direction: column;
+}
+.page:last-child { page-break-after: auto; }
+
+/* === Page 1 — Cover === */
+.cover { text-align: center; }
+
+.cover .title {
+  font-weight: 700;
+  font-size: 2.60em;
+  letter-spacing: 0.10em;
+  color: var(--ink);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.cover .subtitle {
+  margin-top: 0.45em;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.45em;
+  color: var(--burgundy);
+  letter-spacing: 0.02em;
+}
+.divider-band {
+  margin: 1.1em auto 0;
+  width: 78%;
+  height: 1px;
+  background: var(--tan);
+}
+
+.cover .performer-block {
+  margin-top: 6.5em;
+}
+.cover .first-name {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.78em;
+  color: var(--brown);
+  letter-spacing: 0.04em;
+}
+.cover .last-name {
+  margin-top: 0.05em;
+  font-weight: 700;
+  font-size: 3.45em;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  line-height: 1.05;
+}
+.cover .role {
+  margin-top: 0.3em;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.32em;
+  color: var(--burgundy);
+  letter-spacing: 0.06em;
+}
+.cover .with {
+  margin-top: 1.05em;
+  font-style: italic;
+  font-weight: 400;
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-size: 1.0em;
+  color: var(--brown);
+  letter-spacing: 0.03em;
+}
+.cover .pianist {
+  margin-top: 0.12em;
+  font-weight: 700;
+  font-size: 2.05em;
+  color: var(--ink);
+  letter-spacing: 0.03em;
+}
+.cover .role-piano {
+  margin-top: 0.18em;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.18em;
+  color: var(--burgundy);
+  letter-spacing: 0.06em;
+}
+
+.tilde {
+  margin-top: 1.05em;
+  font-family: 'DejaVu Serif', serif;
+  font-style: italic;
+  font-size: 1.45em;
+  color: var(--brown);
+}
+
+.cover .date-block {
+  margin-top: 0.85em;
+}
+.cover .date {
+  font-weight: 700;
+  font-size: 1.92em;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+}
+.cover .time {
+  margin-top: 0.25em;
+  font-weight: 600;
+  font-size: 2.10em;
+  color: var(--burgundy);
+  letter-spacing: 0.06em;
+}
+
+.cover .venue-block {
+  margin-top: 1.7em;
+}
+.cover .venue {
+  font-weight: 700;
+  font-size: 1.65em;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+}
+.cover .address {
+  margin-top: 0.30em;
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.20em;
+  color: var(--brown);
+  letter-spacing: 0.02em;
+  line-height: 1.45;
+}
+
+/* === Page 2 — Programme === */
+.programme {
+  text-align: center;
+}
+.programme .title-it {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 3.85em;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+}
+.programme .title-sub {
+  margin-top: 0.45em;
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05em;
+  color: var(--brown);
+  letter-spacing: 0.06em;
+}
+
+.work {
+  margin: 1.85em auto 0;
+  max-width: 80%;
+  padding: 1.05em 1em;
+  background: rgba(163, 135, 88, 0.10);
+  border-top: 1px solid var(--tan);
+  border-bottom: 1px solid var(--tan);
+}
+.work .title-en {
+  font-weight: 700;
+  font-size: 1.62em;
+  letter-spacing: 0.025em;
+  color: var(--ink);
+  line-height: 1.25;
+}
+.work .composer {
+  margin-top: 0.30em;
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.22em;
+  color: var(--burgundy);
+  letter-spacing: 0.02em;
+}
+.work .movements {
+  margin-top: 0.72em;
+  font-family: 'EB Garamond', 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.10em;
+  color: var(--brown);
+  line-height: 1.65;
+  letter-spacing: 0.02em;
+}
+.work .movements .num {
+  font-weight: 600;
+  color: var(--tan-solid);
+  margin-right: 0.18em;
+}
+.work.compact { padding: 0.85em 1em; }
+.work.compact .composer { margin-top: 0.20em; }
+</style>
+</head>
+<body>
+
+  <!-- =================== Page 1 =================== -->
+  <section class="page cover">
+    <div class="title">Graduation Recital</div>
+    <div class="subtitle">an evening of clarinet music</div>
+    <div class="divider-band"></div>
+
+    <div class="performer-block">
+      <div class="first-name">Andrew</div>
+      <div class="last-name">Seohyeon Kim</div>
+      <div class="role">— Clarinet —</div>
+
+      <div class="with">with</div>
+      <div class="pianist">Edward Holly</div>
+      <div class="role-piano">— Piano —</div>
+    </div>
+
+    <div class="tilde">∽</div>
+
+    <div class="date-block">
+      <div class="date">Monday, 25 May 2026</div>
+      <div class="time">5:40 PM</div>
+    </div>
+
+    <div class="venue-block">
+      <div class="venue">TU Dublin Recital Hall</div>
+      <div class="address">East Quad, Grangegorman Lower<br>Dublin 7, D07 XFF2 · Ireland</div>
+    </div>
+  </section>
+
+  <!-- =================== Page 2 =================== -->
+  <section class="page programme">
+    <div class="title-it"><i>Programme</i></div>
+    <div class="title-sub">— the evening's works —</div>
+
+    <div class="work compact">
+      <div class="title-en">Three Korean Folk Melodies about Bird</div>
+      <div class="composer">Sumin Park</div>
+    </div>
+
+    <div class="work">
+      <div class="title-en">Fantasiestücke, Op. 73</div>
+      <div class="composer">Robert Schumann (1810–1856)</div>
+      <div class="movements">
+        <span class="num">i.</span>Zart und mit Ausdruck<br>
+        <span class="num">ii.</span>Lebhaft, leicht<br>
+        <span class="num">iii.</span>Rasch und mit Feuer
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="title-en">Sonata for Clarinet and Piano No. 1<br>in F minor, Op. 120, No. 1</div>
+      <div class="composer">Johannes Brahms (1833–1897)</div>
+      <div class="movements">
+        <span class="num">i.</span>Allegro appassionato<br>
+        <span class="num">ii.</span>Andante un poco adagio<br>
+        <span class="num">iii.</span>Allegretto grazioso<br>
+        <span class="num">iv.</span>Vivace
+      </div>
+    </div>
+
+    <div class="work compact">
+      <div class="title-en">Parents' Love</div>
+      <div class="composer">SiHyun Uhm</div>
+    </div>
+  </section>
+
+</body>
+</html>
